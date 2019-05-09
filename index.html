@@ -1,67 +1,273 @@
+<!doctype html>
 <html>
 <head>
-<link rel="stylesheet" href="Content/style.css" />
-<title>MangiMind</title>
+    <link rel="stylesheet" href="Content/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="Content/jquery.ui.touch-punch.js"></script>
+    <script src="Content/mastermind.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>MangiMind</title>
 </head>
 <body>
-    <div class="board">
-        <div class="row">
-            <div class="answer">
-                <div class="guessgroup--item">
-                    <div class="guess round"></div>
-                    <div class="guess round"></div>
-                    <div class="guess round"></div>
-                    <div class="guess round"></div>
+    <div class="row">
+        <div class="board">
+            <div class="row">
+                <div class="parent perspective">
+                    <div class="child">mangimind</div>
                 </div>
+            </div>
+            <div class="row">
+                <div class="answer">
+                    <!--<div class="guessgroup--item outline">
+                        <div class="guessgroup--item--outline round"></div>
+                        <div class="guessgroup--item--outline round"></div>
+                        <div class="guessgroup--item--outline round"></div>
+                        <div class="guessgroup--item--outline round"></div>
+                    </div>-->
+                    <div class="guessgroup--item">
+                        <div class="guess round"></div>
+                        <div class="guess round"></div>
+                        <div class="guess round"></div>
+                        <div class="guess round"></div>
+                    </div>
+                </div>
+            </div>
+            <!---->
+            <div class="row" id="row__attempt_10">
+                <div class="hint--group">
+                    <div class="hint--row">
+                        <div class="hint round"></div>
+                        <div class="hint round"></div>
+                    </div>
+                    <div class="hint--row">
+                        <div class="hint round"></div>
+                        <div class="hint round"></div>
+                    </div>
+                </div>
+                <div class="guess--group">
+                    <div class="guessgroup--item" id="attempt_guessgroup_10">
+                        <div class="guess round"></div>
+                        <div class="guess round"></div>
+                        <div class="guess round"></div>
+                        <div class="guess round"></div>
+                    </div>
+                </div>
+                <div id="attempt_submit_10" class="submitbutton"></div>
+            </div>
+            <!---->
+            <div class="row" id="row__attempt_9">
+                <div class="hint--group">
+                    <div class="hint--row">
+                        <div class="hint round"></div>
+                        <div class="hint round"></div>
+                    </div>
+                    <div class="hint--row">
+                        <div class="hint round"></div>
+                        <div class="hint round"></div>
+                    </div>
+                </div>
+                <div class="guess--group">
+                    <div class="guessgroup--item" id="attempt_guessgroup_9">
+                        <div class="guess round"></div>
+                        <div class="guess round"></div>
+                        <div class="guess round"></div>
+                        <div class="guess round"></div>
+                    </div>
+                </div>
+                <div id="attempt_submit_9" class="submitbutton"></div>
+            </div>
+            <!---->
+            <div class="row" id="row__attempt_8">
+                <div class="hint--group">
+                    <div class="hint--row">
+                        <div class="hint round"></div>
+                        <div class="hint round"></div>
+                    </div>
+                    <div class="hint--row">
+                        <div class="hint round"></div>
+                        <div class="hint round"></div>
+                    </div>
+                </div>
+                <div class="guess--group">
+                    <div class="guessgroup--item" id="attempt_guessgroup_8">
+                        <div class="guess round"></div>
+                        <div class="guess round"></div>
+                        <div class="guess round"></div>
+                        <div class="guess round"></div>
+                    </div>
+                </div>
+                <div id="attempt_submit_8" class="submitbutton"></div>
+            </div>
+            <!---->
+            <div class="row" id="row__attempt_7">
+                <div class="hint--group">
+                    <div class="hint--row">
+                        <div class="hint round"></div>
+                        <div class="hint round"></div>
+                    </div>
+                    <div class="hint--row">
+                        <div class="hint round"></div>
+                        <div class="hint round"></div>
+                    </div>
+                </div>
+                <div class="guess--group">
+                    <div class="guessgroup--item" id="attempt_guessgroup_7">
+                        <div class="guess round"></div>
+                        <div class="guess round"></div>
+                        <div class="guess round"></div>
+                        <div class="guess round"></div>
+                    </div>
+                </div>
+                <div id="attempt_submit_7" class="submitbutton"></div>
+            </div>
+            <!---->
+            <div class="row" id="row__attempt_6">
+                <div class="hint--group">
+                    <div class="hint--row">
+                        <div class="hint round"></div>
+                        <div class="hint round"></div>
+                    </div>
+                    <div class="hint--row">
+                        <div class="hint round"></div>
+                        <div class="hint round"></div>
+                    </div>
+                </div>
+                <div class="guess--group">
+                    <div class="guessgroup--item" id="attempt_guessgroup_6">
+                        <div class="guess round"></div>
+                        <div class="guess round"></div>
+                        <div class="guess round"></div>
+                        <div class="guess round"></div>
+                    </div>
+                </div>
+                <div id="attempt_submit_6" class="submitbutton"></div>
+            </div>
+            <!---->
+            <div class="row" id="row__attempt_5">
+                <div class="hint--group">
+                    <div class="hint--row">
+                        <div class="hint round"></div>
+                        <div class="hint round"></div>
+                    </div>
+                    <div class="hint--row">
+                        <div class="hint round"></div>
+                        <div class="hint round"></div>
+                    </div>
+                </div>
+                <div class="guess--group">
+                    <div class="guessgroup--item" id="attempt_guessgroup_5">
+                        <div class="guess round"></div>
+                        <div class="guess round"></div>
+                        <div class="guess round"></div>
+                        <div class="guess round"></div>
+                    </div>
+                </div>
+                <div id="attempt_submit_5" class="submitbutton"></div>
+            </div>
+            <!---->
+            <div class="row" id="row__attempt_4">
+                <div class="hint--group">
+                    <div class="hint--row">
+                        <div class="hint round"></div>
+                        <div class="hint round"></div>
+                    </div>
+                    <div class="hint--row">
+                        <div class="hint round"></div>
+                        <div class="hint round"></div>
+                    </div>
+                </div>
+                <div class="guess--group">
+                    <div class="guessgroup--item" id="attempt_guessgroup_4">
+                        <div class="guess round"></div>
+                        <div class="guess round"></div>
+                        <div class="guess round"></div>
+                        <div class="guess round"></div>
+                    </div>
+                </div>
+                <div id="attempt_submit_4" class="submitbutton"></div>
+            </div>
+            <!---->
+            <div class="row" id="row__attempt_3">
+                <div class="hint--group">
+                    <div class="hint--row">
+                        <div class="hint round"></div>
+                        <div class="hint round"></div>
+                    </div>
+                    <div class="hint--row">
+                        <div class="hint round"></div>
+                        <div class="hint round"></div>
+                    </div>
+                </div>
+                <div class="guess--group">
+                    <div class="guessgroup--item" id="attempt_guessgroup_3">
+                        <div class="guess round"></div>
+                        <div class="guess round"></div>
+                        <div class="guess round"></div>
+                        <div class="guess round"></div>
+                    </div>
+                </div>
+                <div id="attempt_submit_3" class="submitbutton"></div>
+            </div>
+            <!---->
+            <div class="row" id="row__attempt_2">
+                <div class="hint--group">
+                    <div class="hint--row">
+                        <div class="hint round"></div>
+                        <div class="hint round"></div>
+                    </div>
+                    <div class="hint--row">
+                        <div class="hint round"></div>
+                        <div class="hint round"></div>
+                    </div>
+                </div>
+                <div class="guess--group">
+                    <div class="guessgroup--item" id="attempt_guessgroup_2">
+                        <div class="guess round"></div>
+                        <div class="guess round"></div>
+                        <div class="guess round"></div>
+                        <div class="guess round"></div>
+                    </div>
+                </div>
+                <div id="attempt_submit_2" class="submitbutton"></div>
+            </div>
+            <!---->
+            <div class="row" id="row__attempt_1">
+                <div class="hint--group">
+                    <div class="hint--row">
+                        <div class="hint round"></div>
+                        <div class="hint round"></div>
+                    </div>
+                    <div class="hint--row">
+                        <div class="hint round"></div>
+                        <div class="hint round"></div>
+                    </div>
+                </div>
+                <div class="guess--group">
+                    <div class="guessgroup--item" id="attempt_guessgroup_1">
+                        <div class="guess round"></div>
+                        <div class="guess round"></div>
+                        <div class="guess round"></div>
+                        <div class="guess round"></div>
+                    </div>
+                </div>
+                <div id="attempt_submit_1" class="submitbutton"></div>
             </div>
         </div>
-        <div class="row">
-            <div class="hint--group">
-                <div class="hint--row">
-                    <div class="hint round"></div>
-                    <div class="hint round"></div>
-                </div>
-                <div class="hint--row">
-                    <div class="hint round"></div>
-                    <div class="hint round"></div>
-                </div>
-            </div>
-            <div class="guess--group">
-                <div class="guessgroup--item">
-                    <div class="guess round"></div>
-                    <div class="guess round"></div>
-                    <div class="guess round"></div>
-                    <div class="guess round"></div>
-                </div>
+        <div class="sidebar">
+            <div class="choice--group">
+                <div class="choice round red draggable" data-name="red"></div>
+                <div class="choice round green draggable" data-name="green"></div>
+                <div class="choice round black draggable" data-name="black"></div>
+                <div class="choice round white draggable" data-name="white"></div>
+                <div class="choice round yellow draggable" data-name="yellow"></div>
+                <div class="choice round blue draggable" data-name="blue"></div>
             </div>
         </div>
     </div>
-    <div class="sidebar">
-        <!--<div class="button">BUTTON</div>
-        <div class="choice--group">
-            <div class="choice round red">
-                &nbsp;
-            </div>
-            <div class="choice round green">
-                &nbsp;
-            </div>
-            <div class="choice round black">
-                &nbsp;
-            </div>
-            <div class="choice round white">
-                &nbsp;
-            </div>
-            <div class="choice round yellow">
-                &nbsp;
-            </div>
-            <div class="choice round blue">
-                &nbsp;
-            </div>
-        </div>-->
-    </div>
-
     <!--TEST ORNAMENTS-->
-    <div class="board">
+    <!--<div class="board">
         <p>
             <div class="ornament ornament__square"></div>
         </p>
@@ -71,8 +277,9 @@
         </p>
 
         <p>
-            <div class="ornament ornament__corner round"></div>
+            <div class="ornament__corner round"></div>
         </p>
-    </div>
+    </div>-->
+    
 </body>
 </html>
