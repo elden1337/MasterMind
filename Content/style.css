@@ -2,8 +2,9 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 :root {
-    --bg-color: brown;
-    --accent-color: orange;
+    --bg-color: #7b3d2e;
+    --hole-color: #5a291c;
+    --accent-color: #693224;
     --item-margin: 3px;
     font-family: 'Open Sans', sans-serif;
     margin: 0;
@@ -46,7 +47,8 @@
 /*---REGULAR---*/
 
 .board {
-
+    background-color:var(--bg-color);
+    border-radius:4px;
 }
 
 .row {
@@ -54,6 +56,26 @@
 
 .sidebar {
 
+}
+
+.ornament {
+    border: 5px solid var(--accent-color);
+    box-sizing:border-box;
+}
+
+.ornament__round {
+    width:12px;
+    height:12px;
+}
+
+.ornament__square {
+    width:15px;
+    height:15px;
+}
+
+.ornament__corner {
+    width:25px;
+    height:25px;
 }
 
 .button {
@@ -65,25 +87,29 @@
     text-align: center;
 }
 
+.guess--group {
+
+}
+
 .guessgroup--item {
-    display:flex;
-    background-color:var(--bg-color);
-    padding:5px;
-    box-sizing:border-box;
+    display: flex;
+    background-color: var(--hole-color);
+    padding: 5px;
+    box-sizing: border-box;
 }
 
 .guess {
     width: 30px;
     height: 30px;
-    background-color: var(--bg-color);
+    background-color: var(--hole-color);
     border-radius: 50%;
     border: 3px solid var(--accent-color);
     margin:var(--item-margin);
     box-sizing:border-box;
 }
 
-.choice-group {
-
+.choice--group {
+    display:block;
 }
 
 .choice {
@@ -92,6 +118,14 @@
     margin: var(--item-margin);
     border: 1px solid #ccc;
     box-sizing: border-box;
+}
+
+.hint--group {
+    display:block;
+}
+
+.hint--row {
+    display:flex;
 }
 
 .hint {
